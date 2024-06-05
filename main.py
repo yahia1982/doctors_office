@@ -13,7 +13,6 @@ API_BASE_PATH = "/api"
 
 app = Flask(__name__)
 
-
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify({"error": "url not found."}), 404
@@ -24,6 +23,7 @@ def register_extensions(app):
     CORS(app, resources={
         cors_path: {"origins": "*"}
     })
+
 
 
 def register_blueprints(app):

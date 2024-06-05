@@ -6,6 +6,9 @@ select_one= """
         SELECT Name, Email, DateOfBirth, Address FROM Patient WHERE PatientID = :PatientID;
         """
 
+select_one_by_email="""
+        SELECT PatientID, Email, Password FROM Patient WHERE Email = :Email;
+        """
 
 create="""
     INSERT INTO Patient (Name, Email, Password, DateOfBirth, Address, IsActive) 

@@ -1,7 +1,7 @@
 from typing import Any
 
 from dao.patient_dao import PatientDao
-from tools.hash import hash_password
+from tools.passwords import hash_password
 
 patient_dao = PatientDao()
 class PatientService:

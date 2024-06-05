@@ -57,3 +57,8 @@ class StaffDao:
             return self.doctor_row_mapper(doctor)
 
 
+    def get_staff_by_email(self, email):
+        sql=staff_queries.select_one_by_email
+        staff = DBService.query_single(sql, {"Email": email})
+        if staff:
+            return {"StaffID": staff[0], "Email": staff[1], "Password":staff[2], "IsDoctor":staff[3]}

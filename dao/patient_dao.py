@@ -51,3 +51,9 @@ class PatientDao:
                                                   "PatientID": id})
         return self.get_patient(id)
 
+    def get_patient_by_email(self, email):
+        sql = patient_queries.select_one_by_email
+        patient = DBService.query_single(sql, {"Email": email})
+        if patient:
+            return {"PatientID": patient[0], "Email": patient[1], "Password": patient[2]}
+

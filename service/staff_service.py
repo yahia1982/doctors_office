@@ -1,5 +1,5 @@
 from dao.staff_dao import StaffDao
-from tools.hash import hash_password
+from tools.passwords import hash_password
 
 staff_dao = StaffDao()
 class StaffService:

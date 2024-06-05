@@ -20,6 +20,12 @@ select_one2 = """
             WHERE d.IsDoctor and d.StaffID = :StaffID
             """
 
+select_one_by_email="""
+            SELECT StaffID, Email, Password, IsDoctor
+            FROM Staff           
+            WHERE Email = :Email and IsActive
+            """
+
 insert = """
         INSERT INTO Staff (Name, Email, Password, SpecializationID, IsDoctor, IsActive) 
         VALUES(:Name, :Email, :Password, :SpecializationID, TRUE, TRUE) 
