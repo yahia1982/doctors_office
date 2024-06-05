@@ -46,6 +46,8 @@ Once the application is running, open a web browser and navigate to:
     ```
     http://127.0.0.1:5000
     ```
+You can find a Postman collection for all implemented endpoints here:
 
+https://www.postman.com/yahia1982/workspace/flixflex/collection/1552231-96b4987a-4cbe-456d-a3d4-9e1eaffd1fe6?action=share&creator=1552231&active-environment=1552231-01742652-f44b-40b9-97df-b17f2ae60e1c
 ## Note
 Ensure that you have proper permissions and dependencies installed before running the application.
