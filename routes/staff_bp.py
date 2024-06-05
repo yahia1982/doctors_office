@@ -28,7 +28,7 @@ def create_doctor():
     if not data.password:
         return jsonify({"error": "password is required."}), 400
     doctor = staff_service.create_doctor(data)
-    return jsonify({"results": doctor})
+    return jsonify({"results": doctor}), 201
 
 
 @staff_bp.route('/<id>', methods=['PUT'])

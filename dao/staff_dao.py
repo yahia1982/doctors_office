@@ -50,4 +50,10 @@ class StaffDao:
             "StaffID": id
         })
 
+    def get_doctor(self, id):
+        sql = staff_queries.select_one2
+        doctor = DBService.query_single(sql, {"StaffID": id})
+        if doctor:
+            return self.doctor_row_mapper(doctor)
+
 
